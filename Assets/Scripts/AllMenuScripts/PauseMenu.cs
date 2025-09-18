@@ -5,7 +5,6 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool IsPaused = false;
     public GameObject PauseMenuCanvas;
-    //[SerializeField] private GameObject _pauseMenuCanvas;
 
     void Start()
     {
@@ -28,11 +27,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void Play()
-    {//false, 1f
+    {
         ChangePauseState(false, 1f);
-        //PauseMenuCanvas.SetActive(false);// todo
-        //Time.timeScale = 1f;// todo
-        //IsPaused = false;// todo    
     }
 
     public void MainMenuButton()
@@ -41,14 +37,14 @@ public class PauseMenu : MonoBehaviour
     }
 
     private void Stop()
-    {//true, 0f
+    {
         ChangePauseState(true, 0f);
     }
 
     private void ChangePauseState(bool pauseState, float timeScale)
     {
-        PauseMenuCanvas.SetActive(pauseState);// todo
-        Time.timeScale = timeScale;// todo
-        IsPaused = pauseState;// todo
+        PauseMenuCanvas.SetActive(pauseState);
+        Time.timeScale = timeScale;
+        IsPaused = pauseState;
     }
 }

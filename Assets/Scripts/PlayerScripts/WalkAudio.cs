@@ -9,7 +9,6 @@ public class WalkAudio : MonoBehaviour
 
     private float _vSpeed;
     private float _hSpeed;
-    private bool _isMoving;
 
     void Start()
     {
@@ -27,15 +26,11 @@ public class WalkAudio : MonoBehaviour
 
         if (_hSpeed > _movementThreshold || _vSpeed > _movementThreshold)
         {
-            _isMoving = true;
-
             if (_source.isPlaying == false)
                 _source.PlayOneShot(_source.clip);
         }
         else
         {
-            _isMoving = false;
-
             if (_source.isPlaying)
                 _source.Stop();
         }

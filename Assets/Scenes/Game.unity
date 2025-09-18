@@ -3376,7 +3376,7 @@ AudioSource:
   m_GameObject: {fileID: 925103951}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 7183817597453536764, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
   m_audioClip: {fileID: 8300000, guid: 13f40972e869ee44f9229f201afc3de7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -3478,6 +3478,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 682668957}
   _input: {fileID: 682668953}
   _source: {fileID: 925103952}
+  _movementThreshold: 0.5
 --- !u!4 &925103954
 Transform:
   m_ObjectHideFlags: 0
@@ -4665,7 +4666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4664968038969980209, guid: 371a88ee466ffc949a1b572542e56696, type: 3}
       propertyPath: _jumpPower
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6302964734845442477, guid: 371a88ee466ffc949a1b572542e56696, type: 3}
       propertyPath: m_Name

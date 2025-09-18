@@ -6,7 +6,7 @@ public class VolumeSlider : MonoBehaviour
 {
     [Header("Audio Settings")]
     [SerializeField] private AudioMixer audioMixer;
-    [SerializeField] private string mixerParameter = "Volume";
+    [SerializeField] private string mixerParameter = "ExposedParameterName";
 
     [Header("UI Elements")]
     [SerializeField] private Slider volumeSlider;

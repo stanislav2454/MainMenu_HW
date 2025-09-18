@@ -17,12 +17,13 @@ public class CharacterMovement : MonoBehaviour
     }
 
     public void Move(float horizontalDirection, float verticalDirection)
-    {// - не надо передавать данные между методами через поля.
-     //   Для этого есть входные параметры и возвращаемое значение.
+    {
         float _currentMoveSpeed = GetCurrentSpeed();
 
-        Vector3 direction = new Vector3(horizontalDirection, ZeroValue, verticalDirection) * _currentMoveSpeed * Time.deltaTime;
-        transform.Translate(direction);
+        Vector3 direction = new Vector3(horizontalDirection, ZeroValue, verticalDirection).normalized;
+        Vector3 movement = direction * _currentMoveSpeed * Time.fixedDeltaTime;
+
+        transform.Translate(movement);
     }
 
     private float GetCurrentSpeed()

@@ -11,7 +11,7 @@ public class GroundDetector : MonoBehaviour
 
     private void FixedUpdate()
     {
-        JustLanded = !_wasGrounded && IsGrounded;
+        JustLanded = _wasGrounded == false && IsGrounded;
         JustLeftGround = _wasGrounded && !IsGrounded;
         _wasGrounded = IsGrounded;
     }

@@ -7,7 +7,7 @@ public class VolumeToggle : MonoBehaviour
     [SerializeField] private Toggle _volumeToggle;
 
     private string _playerPrefsKey = "AudioEnabled";
-    private int _defaultValue = 1; // 1 = включено, 0 = выключено
+    private int _defaultValue = 1;
 
     private const int SOUND_ENABLED = 1;
     private const int SOUND_DISABLED = 0;
@@ -36,7 +36,7 @@ public class VolumeToggle : MonoBehaviour
 
     private void ToggleAudio(bool isOn)
     {
-        AudioListener.pause = isOn == false;//
+        AudioListener.pause = isOn == false;
 
         int saveValue = isOn ? SOUND_ENABLED : SOUND_DISABLED;
         PlayerPrefs.SetInt(_playerPrefsKey, saveValue);

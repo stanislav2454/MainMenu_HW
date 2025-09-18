@@ -15,14 +15,14 @@ public class WalkAudio : MonoBehaviour
         if (_input == null)
             Debug.LogError("Userinput not set!", this);
 
-        if (_rigidbody != null)
-            _rigidbody = GetComponent<Rigidbody>();
+        if (_rigidbody == null)
+            Debug.LogError("Rigidbody not set!", this);
     }
 
     void Update()
     {
-        _vSpeed = Mathf.Abs(_input.VerticalDirection);
-        _hSpeed = Mathf.Abs(_input.HorizontalDirection);
+        _vSpeed = Mathf.Abs(_rigidbody.velocity.x);
+        _hSpeed = Mathf.Abs(_rigidbody.velocity.z);
 
         if (_hSpeed > _movementThreshold || _vSpeed > _movementThreshold)
         {

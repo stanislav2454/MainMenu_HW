@@ -2851,14 +2851,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3615470dc6f2184e8998e550dcc574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
-  mixerParameter: MasterVolume
-  volumeSlider: {fileID: 700729547}
-  defaultVolume: 0.8
-  minVolume: 0.0001
-  maxVolume: 1
-  playerPrefsKey: MasterVolumeLevel
-  saveSettings: 1
+  _audioMixer: {fileID: 24100000, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
+  _mixerParameter: MasterVolume
+  _volumeSlider: {fileID: 700729547}
+  _defaultVolume: 0.8
+  _minVolume: 0.0001
+  _maxVolume: 1
+  _playerPrefsKey: MasterVolumeLevel
+  _saveSettings: 1
 --- !u!1 &773487049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,6 +3584,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1158795719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158795720}
+  m_Layer: 0
+  m_Name: Environment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1158795720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158795719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2710579874029762053}
+  - {fileID: 1407013047}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177405128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,14 +3788,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3615470dc6f2184e8998e550dcc574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
-  mixerParameter: MusicVolume
-  volumeSlider: {fileID: 1197007424}
-  defaultVolume: 0.8
-  minVolume: 0.0001
-  maxVolume: 1
-  playerPrefsKey: MusicVolumeLevel
-  saveSettings: 1
+  _audioMixer: {fileID: 24100000, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
+  _mixerParameter: MusicVolume
+  _volumeSlider: {fileID: 1197007424}
+  _defaultVolume: 0.8
+  _minVolume: 0.0001
+  _maxVolume: 1
+  _playerPrefsKey: MusicVolumeLevel
+  _saveSettings: 1
 --- !u!1 &1226999696
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,7 +4644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1158795720}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 45}
 --- !u!54 &1407013048
 Rigidbody:
@@ -4743,14 +4776,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3615470dc6f2184e8998e550dcc574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
-  mixerParameter: SFXVolume
-  volumeSlider: {fileID: 1410817068}
-  defaultVolume: 0.8
-  minVolume: 0.0001
-  maxVolume: 1
-  playerPrefsKey: SFXVolumeLevel
-  saveSettings: 1
+  _audioMixer: {fileID: 24100000, guid: 7134e307ff5ef014097b94cbfb5e0c62, type: 2}
+  _mixerParameter: SFXVolume
+  _volumeSlider: {fileID: 1410817068}
+  _defaultVolume: 0.8
+  _minVolume: 0.0001
+  _maxVolume: 1
+  _playerPrefsKey: SFXVolumeLevel
+  _saveSettings: 1
 --- !u!1 &1479172756
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,8 +5167,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 462206085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 941.41003, y: -550.6633}
   m_SizeDelta: {x: 1882.82, y: 1101.3267}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6282,12 +6315,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146901215269391968}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1158795720}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!64 &7912869849372516341
 MeshCollider:
@@ -6296,7 +6329,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146901215269391968}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7cbd39634b47cc54998f8b3343a70c06, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6316,11 +6349,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1177405131}
-  - {fileID: 2710579874029762053}
-  - {fileID: 459865404}
-  - {fileID: 266380435}
-  - {fileID: 276780985}
-  - {fileID: 1407013047}
   - {fileID: 1918084356}
-  - {fileID: 1386621967}
+  - {fileID: 459865404}
+  - {fileID: 276780985}
+  - {fileID: 266380435}
   - {fileID: 366236666}
+  - {fileID: 1158795720}
+  - {fileID: 1386621967}

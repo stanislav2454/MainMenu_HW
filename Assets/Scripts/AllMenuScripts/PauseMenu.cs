@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    private const string MAIN_MENU = "MainMenu";
+
     public static bool IsPaused = false;
     public GameObject PauseMenuCanvas;
 
@@ -33,7 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenuButton()
     {
-        SceneManager.LoadScene("MainMenu");// todo
+        SceneManager.LoadScene(MAIN_MENU);
     }
 
     private void Stop()

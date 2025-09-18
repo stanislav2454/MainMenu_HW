@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(CapsuleCollider), typeof(Runner), typeof(Crawler))]
+[RequireComponent(typeof(CapsuleCollider), typeof(Rigidbody))]
+[RequireComponent(typeof(Runner), typeof(Crawler))]
 public class CharacterMovement : MonoBehaviour
 {
-    private const int ZeroValue = 0;
+    private const int ZERO_VALUE = 0;
 
     [SerializeField] private MovementSettings _settings;
 
+    private Rigidbody _rigidbody;
     private Runner _runner;
     private Crawler _crawler;
 
     private void Awake()
     {
+        _rigidbody = GetComponent<Rigidbody>();
         _runner = GetComponent<Runner>();
         _crawler = GetComponent<Crawler>();
     }
@@ -20,10 +23,11 @@ public class CharacterMovement : MonoBehaviour
     {
         float _currentMoveSpeed = GetCurrentSpeed();
 
-        Vector3 direction = new Vector3(horizontalDirection, ZeroValue, verticalDirection).normalized;
-        Vector3 movement = direction * _currentMoveSpeed * Time.fixedDeltaTime;
+        Vector3 localDirection = new Vector3(horizontalDirection, ZERO_VALUE, verticalDirection).normalized;
+        Vector3 worldDirection = transform.TransformDirection(localDirection);
+        Vector3 movement = worldDirection * _currentMoveSpeed;
 
-        transform.Translate(movement);
+        _rigidbody.velocity = new Vector3(movement.x, _rigidbody.velocity.y, movement.z);
     }
 
     private float GetCurrentSpeed()

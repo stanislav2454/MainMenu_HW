@@ -397,7 +397,7 @@ Rigidbody:
   m_GameObject: {fileID: 6302964734845442477}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 8
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -446,7 +446,7 @@ ConstantForce:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6302964734845442477}
   m_Enabled: 1
-  m_Force: {x: 0, y: -5, z: 0}
+  m_Force: {x: 0, y: -45, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcfcaa35ef435604c8cc9b304b16bcc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpPower: 5
+  _jumpPower: 25
 --- !u!114 &5458561510262352675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 6768436757633921279}
   _input: {fileID: 2843060347962944640}
   _source: {fileID: 2897403515494703282}
-  _movementThreshold: 0.5
+  _movementThreshold: 0.05
 --- !u!82 &2897403515494703282
 AudioSource:
   m_ObjectHideFlags: 0
